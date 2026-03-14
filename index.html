@@ -1,0 +1,701 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cem Akın Academy</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Language Toggle -->
+<div class="lang-toggle" id="langToggle">
+    <button class="lang-btn active" data-lang="tr" onclick="setLang('tr')">TR</button>
+    <button class="lang-btn" data-lang="en" onclick="setLang('en')">EN</button>
+</div>
+
+<!-- Navigation -->
+<nav class="navbar" id="navbar">
+    <div class="nav-container">
+        <a href="#" class="nav-logo">
+            <span class="logo-text">CA</span>
+            <span class="logo-name">Academy</span>
+        </a>
+        <div class="nav-links" id="navLinks">
+            <a href="#home" class="nav-link" data-tr="Ana Sayfa" data-en="Home">Ana Sayfa</a>
+            <a href="#about" class="nav-link" data-tr="Hakkında" data-en="About">Hakkında</a>
+            <a href="#programs" class="nav-link" data-tr="Programlar" data-en="Programs">Programlar</a>
+            <a href="#curriculum" class="nav-link" data-tr="Müfredat" data-en="Curriculum">Müfredat</a>
+            <a href="#journey" class="nav-link" data-tr="Yolculuk" data-en="Journey">Yolculuk</a>
+            <a href="#contact" class="nav-link" data-tr="İletişim" data-en="Contact">İletişim</a>
+            <div class="nav-auth-mobile">
+                <button class="btn-auth btn-login" onclick="openModal('login')" data-tr="Giriş" data-en="Login">Giriş</button>
+                <button class="btn-auth btn-register" onclick="openModal('register')" data-tr="Kayıt" data-en="Register">Kayıt</button>
+            </div>
+        </div>
+        <div class="nav-auth">
+            <button class="btn-auth btn-login" onclick="openModal('login')" data-tr="Giriş" data-en="Login">Giriş</button>
+            <button class="btn-auth btn-register" onclick="openModal('register')" data-tr="Kayıt" data-en="Register">Kayıt</button>
+        </div>
+        <button class="nav-toggle" id="navToggle" aria-label="Menu">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero" id="home">
+    <div class="hero-bg-pattern"></div>
+    <div class="container">
+        <div class="hero-grid">
+            <div class="hero-content">
+                <p class="hero-eyebrow" data-tr="Cem Akın Academy" data-en="Cem Akın Academy">Cem Akın Academy</p>
+                <h1 class="hero-title" data-tr="Başlatıcılar İçin<br>Girişimcilik Okulu" data-en="Entrepreneurship School<br>For Starters">Başlatıcılar İçin<br>Girişimcilik Okulu</h1>
+                <p class="hero-subtitle" data-tr="17 yaşında sıfırdan başladım. 5 ülkede iş kurdum. Şimdi sıra sende. Yola çıkmaya ve yolda kalmaya inanırım." data-en="I started from zero at 17. Built businesses in 5 countries. Now it's your turn. I believe in starting and staying on the path.">17 yaşında sıfırdan başladım. 5 ülkede iş kurdum. Şimdi sıra sende. Yola çıkmaya ve yolda kalmaya inanırım.</p>
+                <div class="hero-actions">
+                    <a href="#programs" class="btn btn-primary" data-tr="Programları Keşfet" data-en="Explore Programs">Programları Keşfet</a>
+                    <a href="#about" class="btn btn-outline" data-tr="Hikayemi Oku" data-en="Read My Story">Hikayemi Oku</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label" data-tr="Ülke" data-en="Countries">Ülke</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">20+</span>
+                        <span class="stat-label" data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">8</span>
+                        <span class="stat-label" data-tr="Şehir" data-en="Cities">Şehir</span>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-number">5</span>
+                        <span class="stat-label" data-tr="Eğitim Programı" data-en="Programs">Eğitim Programı</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="hero-image-wrapper">
+                    <img src="cem-akin.jpg" alt="Cem Akın" loading="eager">
+                    <div class="hero-image-accent"></div>
+                </div>
+                <div class="hero-image-label">
+                    <span class="label-name">Cem Akın</span>
+                    <span class="label-title" data-tr="Girişimci & Eğitmen" data-en="Entrepreneur & Instructor">Girişimci & Eğitmen</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="hero-scroll">
+        <div class="scroll-indicator"></div>
+    </div>
+</section>
+
+<!-- Motto Banner -->
+<section class="motto-banner">
+    <div class="container">
+        <blockquote class="motto-text" data-tr="&ldquo;Sen yürü. Yürüdükçe yol sana görünür.&rdquo;" data-en="&ldquo;Walk forward. The path reveals itself as you go.&rdquo;">&ldquo;Sen yürü. Yürüdükçe yol sana görünür.&rdquo;</blockquote>
+        <p class="motto-author">— Cem Akın</p>
+    </div>
+</section>
+
+<!-- About Section -->
+<section class="section about" id="about">
+    <div class="container">
+        <div class="about-grid">
+            <div class="about-content">
+                <span class="section-tag" data-tr="Hikaye" data-en="Story">Hikaye</span>
+                <h2 class="section-title" data-tr="Bir Başlatıcının Yolculuğu" data-en="A Starter's Journey">Bir Başlatıcının Yolculuğu</h2>
+                <p class="about-text" data-tr="17 yaşında ilk işletmemi kurdum. Hiçbir şey bilmiyordum ama bir şeyi biliyordum: başlamak lazım. Ankara'dan Eskişehir'e, İstanbul'dan Düsseldorf'a, Londra'dan New York'a, Los Angeles'tan Miami'ye uzanan bir yolculuk başladı." data-en="I started my first business at 17. I knew nothing, but I knew one thing: you have to start. A journey began from Ankara to Eskişehir, Istanbul to Düsseldorf, London to New York, Los Angeles to Miami.">17 yaşında ilk işletmemi kurdum. Hiçbir şey bilmiyordum ama bir şeyi biliyordum: başlamak lazım. Ankara'dan Eskişehir'e, İstanbul'dan Düsseldorf'a, Londra'dan New York'a, Los Angeles'tan Miami'ye uzanan bir yolculuk başladı.</p>
+                <p class="about-text" data-tr="Yüzlerce şehirde binlerce iş modelini inceledim. Birden fazla kez pivot yaptım. Her seferinde yeniden başladım. Amerika'da 'Extraordinary Ability' kategorisine kabul edildim. Çünkü aynı yerde saymak korkakların, yeniden başlamak cesurların işidir." data-en="I studied thousands of business models in hundreds of cities. I pivoted multiple times. Started over each time. I was accepted into the US 'Extraordinary Ability' category. Because staying still is for cowards — restarting is for the brave.">Yüzlerce şehirde binlerce iş modelini inceledim. Birden fazla kez pivot yaptım. Her seferinde yeniden başladım. Amerika'da 'Extraordinary Ability' kategorisine kabul edildim. Çünkü aynı yerde saymak korkakların, yeniden başlamak cesurların işidir.</p>
+                <p class="about-highlight" data-tr="Misyonum: 1 milyon kişiyi kendi hayalleri için yola çıkarmak." data-en="My mission: Launch 1 million people toward their own dreams.">Misyonum: 1 milyon kişiyi kendi hayalleri için yola çıkarmak.</p>
+            </div>
+            <div class="about-visual">
+                <div class="about-cities">
+                    <div class="city-pin" style="--delay:0"><span>Ankara</span></div>
+                    <div class="city-pin" style="--delay:1"><span>Eskişehir</span></div>
+                    <div class="city-pin" style="--delay:2"><span>İstanbul</span></div>
+                    <div class="city-pin" style="--delay:3"><span>Düsseldorf</span></div>
+                    <div class="city-pin" style="--delay:4"><span>London</span></div>
+                    <div class="city-pin" style="--delay:5"><span>New York</span></div>
+                    <div class="city-pin" style="--delay:6"><span>Los Angeles</span></div>
+                    <div class="city-pin" style="--delay:7"><span>Miami</span></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Programs Section -->
+<section class="section programs" id="programs">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-tr="Programlar" data-en="Programs">Programlar</span>
+            <h2 class="section-title" data-tr="Eğitim Programları" data-en="Training Programs">Eğitim Programları</h2>
+            <p class="section-desc" data-tr="Girişimcilik yolculuğunun her aşaması için tasarlanmış 5 kapsamlı program" data-en="5 comprehensive programs designed for every stage of your entrepreneurship journey">Girişimcilik yolculuğunun her aşaması için tasarlanmış 5 kapsamlı program</p>
+        </div>
+
+        <div class="programs-grid">
+            <!-- Program 1 -->
+            <div class="program-card" data-program="1">
+                <div class="program-number">01</div>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                </div>
+                <h3 class="program-title" data-tr="Girişimciliğe İlk Adım" data-en="First Steps in Entrepreneurship">Girişimciliğe İlk Adım</h3>
+                <p class="program-desc" data-tr="Sıfırdan başlayanlara özel. Girişimci zihin yapısı, fikir validasyonu ve ilk iş planını oluşturma." data-en="Designed for absolute beginners. Entrepreneurial mindset, idea validation, and creating your first business plan.">Sıfırdan başlayanlara özel. Girişimci zihin yapısı, fikir validasyonu ve ilk iş planını oluşturma.</p>
+                <div class="program-meta">
+                    <span class="program-modules" data-tr="4 Modül · 16 Ders" data-en="4 Modules · 16 Lessons">4 Modül · 16 Ders</span>
+                </div>
+                <button class="program-toggle" onclick="toggleProgram(1)" data-tr="Müfredatı Gör" data-en="View Curriculum">Müfredatı Gör</button>
+                <div class="program-curriculum" id="prog-1">
+                    <div class="module">
+                        <h4 data-tr="Modül 1: Girişimci Zihin Yapısı" data-en="Module 1: Entrepreneurial Mindset">Modül 1: Girişimci Zihin Yapısı</h4>
+                        <ul>
+                            <li data-tr="Girişimci kimdir? Mitler ve gerçekler" data-en="Who is an entrepreneur? Myths and realities">Girişimci kimdir? Mitler ve gerçekler</li>
+                            <li data-tr="Risk alma ve belirsizlikle yaşamak" data-en="Taking risks and living with uncertainty">Risk alma ve belirsizlikle yaşamak</li>
+                            <li data-tr="Başarısızlık korkusunu aşmak" data-en="Overcoming the fear of failure">Başarısızlık korkusunu aşmak</li>
+                            <li data-tr="Başlatıcı düşünce sistemi" data-en="The starter's thinking system">Başlatıcı düşünce sistemi</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 2: Fikir Validasyonu" data-en="Module 2: Idea Validation">Modül 2: Fikir Validasyonu</h4>
+                        <ul>
+                            <li data-tr="Doğru problemi bulmak" data-en="Finding the right problem">Doğru problemi bulmak</li>
+                            <li data-tr="Pazar araştırması temelleri" data-en="Market research fundamentals">Pazar araştırması temelleri</li>
+                            <li data-tr="MVP: Minimum uygulanabilir ürün" data-en="MVP: Minimum Viable Product">MVP: Minimum uygulanabilir ürün</li>
+                            <li data-tr="Müşteri keşif görüşmeleri" data-en="Customer discovery interviews">Müşteri keşif görüşmeleri</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 3: İlk İş Planın" data-en="Module 3: Your First Business Plan">Modül 3: İlk İş Planın</h4>
+                        <ul>
+                            <li data-tr="İş planı yazımı adım adım" data-en="Writing a business plan step by step">İş planı yazımı adım adım</li>
+                            <li data-tr="Hedef kitle belirleme" data-en="Defining your target audience">Hedef kitle belirleme</li>
+                            <li data-tr="Değer önerisi oluşturma" data-en="Creating your value proposition">Değer önerisi oluşturma</li>
+                            <li data-tr="Finansal projeksiyon temelleri" data-en="Financial projection basics">Finansal projeksiyon temelleri</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 4: Sıfırdan Başlamak" data-en="Module 4: Starting from Zero">Modül 4: Sıfırdan Başlamak</h4>
+                        <ul>
+                            <li data-tr="Şirket kuruluş süreçleri" data-en="Company formation processes">Şirket kuruluş süreçleri</li>
+                            <li data-tr="Hukuki yapı ve ortaklık modelleri" data-en="Legal structure and partnership models">Hukuki yapı ve ortaklık modelleri</li>
+                            <li data-tr="İlk müşterini bulmak" data-en="Finding your first customer">İlk müşterini bulmak</li>
+                            <li data-tr="Bootstrapping: Kısıtlı kaynakla büyümek" data-en="Bootstrapping: Growing with limited resources">Bootstrapping: Kısıtlı kaynakla büyümek</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 2 -->
+            <div class="program-card" data-program="2">
+                <div class="program-number">02</div>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg>
+                </div>
+                <h3 class="program-title" data-tr="İş Modeli & Strateji" data-en="Business Model & Strategy">İş Modeli & Strateji</h3>
+                <p class="program-desc" data-tr="İş modelini tasarla, gelir kaynaklarını belirle, rekabette öne çık ve doğru zamanda pivot yap." data-en="Design your business model, define revenue streams, stand out in competition, and pivot at the right time.">İş modelini tasarla, gelir kaynaklarını belirle, rekabette öne çık ve doğru zamanda pivot yap.</p>
+                <div class="program-meta">
+                    <span class="program-modules" data-tr="4 Modül · 16 Ders" data-en="4 Modules · 16 Lessons">4 Modül · 16 Ders</span>
+                </div>
+                <button class="program-toggle" onclick="toggleProgram(2)" data-tr="Müfredatı Gör" data-en="View Curriculum">Müfredatı Gör</button>
+                <div class="program-curriculum" id="prog-2">
+                    <div class="module">
+                        <h4 data-tr="Modül 1: Business Model Canvas" data-en="Module 1: Business Model Canvas">Modül 1: Business Model Canvas</h4>
+                        <ul>
+                            <li data-tr="Canvas'ın 9 yapı taşı" data-en="The 9 building blocks of Canvas">Canvas'ın 9 yapı taşı</li>
+                            <li data-tr="Değer önerisi haritası" data-en="Value proposition mapping">Değer önerisi haritası</li>
+                            <li data-tr="Müşteri segmentasyonu" data-en="Customer segmentation">Müşteri segmentasyonu</li>
+                            <li data-tr="Gerçek dünya vaka çalışmaları" data-en="Real-world case studies">Gerçek dünya vaka çalışmaları</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 2: Gelir Modelleri" data-en="Module 2: Revenue Models">Modül 2: Gelir Modelleri</h4>
+                        <ul>
+                            <li data-tr="Abonelik, lisans ve SaaS modelleri" data-en="Subscription, licensing, and SaaS models">Abonelik, lisans ve SaaS modelleri</li>
+                            <li data-tr="Marketplace ve platform ekonomisi" data-en="Marketplace and platform economy">Marketplace ve platform ekonomisi</li>
+                            <li data-tr="Freemium stratejileri" data-en="Freemium strategies">Freemium stratejileri</li>
+                            <li data-tr="Fiyatlandırma psikolojisi" data-en="Pricing psychology">Fiyatlandırma psikolojisi</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 3: Rekabet Analizi" data-en="Module 3: Competitive Analysis">Modül 3: Rekabet Analizi</h4>
+                        <ul>
+                            <li data-tr="Rakip analizi çerçeveleri" data-en="Competitor analysis frameworks">Rakip analizi çerçeveleri</li>
+                            <li data-tr="Blue Ocean stratejisi" data-en="Blue Ocean strategy">Blue Ocean stratejisi</li>
+                            <li data-tr="Farklılaşma ve konumlandırma" data-en="Differentiation and positioning">Farklılaşma ve konumlandırma</li>
+                            <li data-tr="Sürdürülebilir rekabet avantajı" data-en="Sustainable competitive advantage">Sürdürülebilir rekabet avantajı</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 4: Pivot Stratejileri" data-en="Module 4: Pivot Strategies">Modül 4: Pivot Stratejileri</h4>
+                        <ul>
+                            <li data-tr="Ne zaman pivot yapmalısın?" data-en="When should you pivot?">Ne zaman pivot yapmalısın?</li>
+                            <li data-tr="Pivot türleri ve örnekleri" data-en="Types of pivots and examples">Pivot türleri ve örnekleri</li>
+                            <li data-tr="Veri odaklı karar alma" data-en="Data-driven decision making">Veri odaklı karar alma</li>
+                            <li data-tr="Başarısızlıktan ders çıkarmak" data-en="Learning from failure">Başarısızlıktan ders çıkarmak</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 3 -->
+            <div class="program-card" data-program="3">
+                <div class="program-number">03</div>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
+                </div>
+                <h3 class="program-title" data-tr="Global İş Geliştirme" data-en="Going Global">Global İş Geliştirme</h3>
+                <p class="program-desc" data-tr="Uluslararası pazarlara açılma, kültürler arası iş yapma ve Avrupa-Amerika'da şirket kurma rehberi." data-en="Guide to entering international markets, cross-cultural business, and setting up companies in Europe and the USA.">Uluslararası pazarlara açılma, kültürler arası iş yapma ve Avrupa-Amerika'da şirket kurma rehberi.</p>
+                <div class="program-meta">
+                    <span class="program-modules" data-tr="4 Modül · 16 Ders" data-en="4 Modules · 16 Lessons">4 Modül · 16 Ders</span>
+                </div>
+                <button class="program-toggle" onclick="toggleProgram(3)" data-tr="Müfredatı Gör" data-en="View Curriculum">Müfredatı Gör</button>
+                <div class="program-curriculum" id="prog-3">
+                    <div class="module">
+                        <h4 data-tr="Modül 1: Uluslararası Pazarlar" data-en="Module 1: International Markets">Modül 1: Uluslararası Pazarlar</h4>
+                        <ul>
+                            <li data-tr="Global pazar analizi" data-en="Global market analysis">Global pazar analizi</li>
+                            <li data-tr="Pazar giriş stratejileri" data-en="Market entry strategies">Pazar giriş stratejileri</li>
+                            <li data-tr="Lokalizasyon ve adaptasyon" data-en="Localization and adaptation">Lokalizasyon ve adaptasyon</li>
+                            <li data-tr="E-ticaret ile global satış" data-en="Global sales through e-commerce">E-ticaret ile global satış</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 2: Kültürler Arası İş" data-en="Module 2: Cross-Cultural Business">Modül 2: Kültürler Arası İş</h4>
+                        <ul>
+                            <li data-tr="Kültürel zeka (CQ)" data-en="Cultural intelligence (CQ)">Kültürel zeka (CQ)</li>
+                            <li data-tr="Uluslararası müzakere teknikleri" data-en="International negotiation techniques">Uluslararası müzakere teknikleri</li>
+                            <li data-tr="Global networking" data-en="Global networking">Global networking</li>
+                            <li data-tr="Uzak ekip yönetimi" data-en="Remote team management">Uzak ekip yönetimi</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 3: Avrupa'da İş Kurma" data-en="Module 3: Business in Europe">Modül 3: Avrupa'da İş Kurma</h4>
+                        <ul>
+                            <li data-tr="AB iş ortamı ve düzenlemeleri" data-en="EU business environment and regulations">AB iş ortamı ve düzenlemeleri</li>
+                            <li data-tr="Almanya'da şirket kuruluşu" data-en="Setting up a company in Germany">Almanya'da şirket kuruluşu</li>
+                            <li data-tr="AB fonları ve teşvikler" data-en="EU funds and incentives">AB fonları ve teşvikler</li>
+                            <li data-tr="Avrupa lojistik ve tedarik zinciri" data-en="European logistics and supply chain">Avrupa lojistik ve tedarik zinciri</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 4: Amerika'da İş Kurma" data-en="Module 4: Business in the USA">Modül 4: Amerika'da İş Kurma</h4>
+                        <ul>
+                            <li data-tr="ABD şirket türleri (LLC, Corp, etc.)" data-en="US company types (LLC, Corp, etc.)">ABD şirket türleri (LLC, Corp, etc.)</li>
+                            <li data-tr="Vize seçenekleri: E-2, O-1, EB-1" data-en="Visa options: E-2, O-1, EB-1">Vize seçenekleri: E-2, O-1, EB-1</li>
+                            <li data-tr="ABD vergi sistemi ve uyumluluk" data-en="US tax system and compliance">ABD vergi sistemi ve uyumluluk</li>
+                            <li data-tr="Silikon Vadisi vs. Miami ekosistemi" data-en="Silicon Valley vs. Miami ecosystem">Silikon Vadisi vs. Miami ekosistemi</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 4 -->
+            <div class="program-card" data-program="4">
+                <div class="program-number">04</div>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.59 13.41l-7.17 7.17a2 2 0 01-2.83 0L2 12V2h10l8.59 8.59a2 2 0 010 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                </div>
+                <h3 class="program-title" data-tr="Marka & Büyüme" data-en="Brand & Growth">Marka & Büyüme</h3>
+                <p class="program-desc" data-tr="Güçlü bir marka oluştur, dijital dünyada görünür ol, ölçeklen ve doğru ortaklıklar kur." data-en="Build a strong brand, become visible in the digital world, scale up, and form the right partnerships.">Güçlü bir marka oluştur, dijital dünyada görünür ol, ölçeklen ve doğru ortaklıklar kur.</p>
+                <div class="program-meta">
+                    <span class="program-modules" data-tr="4 Modül · 16 Ders" data-en="4 Modules · 16 Lessons">4 Modül · 16 Ders</span>
+                </div>
+                <button class="program-toggle" onclick="toggleProgram(4)" data-tr="Müfredatı Gör" data-en="View Curriculum">Müfredatı Gör</button>
+                <div class="program-curriculum" id="prog-4">
+                    <div class="module">
+                        <h4 data-tr="Modül 1: Marka Oluşturma" data-en="Module 1: Building a Brand">Modül 1: Marka Oluşturma</h4>
+                        <ul>
+                            <li data-tr="Marka kimliği ve hikaye anlatımı" data-en="Brand identity and storytelling">Marka kimliği ve hikaye anlatımı</li>
+                            <li data-tr="Görsel kimlik tasarımı" data-en="Visual identity design">Görsel kimlik tasarımı</li>
+                            <li data-tr="Marka sesi ve tonu" data-en="Brand voice and tone">Marka sesi ve tonu</li>
+                            <li data-tr="Topluluk oluşturma" data-en="Community building">Topluluk oluşturma</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 2: Dijital Pazarlama" data-en="Module 2: Digital Marketing">Modül 2: Dijital Pazarlama</h4>
+                        <ul>
+                            <li data-tr="İçerik stratejisi ve SEO" data-en="Content strategy and SEO">İçerik stratejisi ve SEO</li>
+                            <li data-tr="Sosyal medya büyüme stratejileri" data-en="Social media growth strategies">Sosyal medya büyüme stratejileri</li>
+                            <li data-tr="Performans pazarlama temelleri" data-en="Performance marketing fundamentals">Performans pazarlama temelleri</li>
+                            <li data-tr="E-posta pazarlama ve otomasyon" data-en="Email marketing and automation">E-posta pazarlama ve otomasyon</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 3: Ölçeklendirme" data-en="Module 3: Scaling">Modül 3: Ölçeklendirme</h4>
+                        <ul>
+                            <li data-tr="Büyüme metrikleri ve KPI'lar" data-en="Growth metrics and KPIs">Büyüme metrikleri ve KPI'lar</li>
+                            <li data-tr="Operasyonel verimlilik" data-en="Operational efficiency">Operasyonel verimlilik</li>
+                            <li data-tr="Otomasyon ve sistemleştirme" data-en="Automation and systemization">Otomasyon ve sistemleştirme</li>
+                            <li data-tr="Uluslararası ölçeklendirme" data-en="International scaling">Uluslararası ölçeklendirme</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 4: Yatırım & Ortaklık" data-en="Module 4: Investment & Partnerships">Modül 4: Yatırım & Ortaklık</h4>
+                        <ul>
+                            <li data-tr="Yatırımcı tipleri ve beklentileri" data-en="Investor types and expectations">Yatırımcı tipleri ve beklentileri</li>
+                            <li data-tr="Pitch deck hazırlama" data-en="Preparing a pitch deck">Pitch deck hazırlama</li>
+                            <li data-tr="Ortaklık yapılandırma" data-en="Partnership structuring">Ortaklık yapılandırma</li>
+                            <li data-tr="Term sheet ve müzakere" data-en="Term sheets and negotiation">Term sheet ve müzakere</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Program 5 -->
+            <div class="program-card" data-program="5">
+                <div class="program-number">05</div>
+                <div class="program-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                </div>
+                <h3 class="program-title" data-tr="Liderlik & Vizyon" data-en="Leadership & Vision">Liderlik & Vizyon</h3>
+                <p class="program-desc" data-tr="Lider bir girişimci ol, güçlü ekipler kur, krizleri yönet ve sürdürülebilir başarıya ulaş." data-en="Become a leader-entrepreneur, build strong teams, manage crises, and achieve sustainable success.">Lider bir girişimci ol, güçlü ekipler kur, krizleri yönet ve sürdürülebilir başarıya ulaş.</p>
+                <div class="program-meta">
+                    <span class="program-modules" data-tr="4 Modül · 16 Ders" data-en="4 Modules · 16 Lessons">4 Modül · 16 Ders</span>
+                </div>
+                <button class="program-toggle" onclick="toggleProgram(5)" data-tr="Müfredatı Gör" data-en="View Curriculum">Müfredatı Gör</button>
+                <div class="program-curriculum" id="prog-5">
+                    <div class="module">
+                        <h4 data-tr="Modül 1: Lider Girişimci" data-en="Module 1: The Leader-Entrepreneur">Modül 1: Lider Girişimci</h4>
+                        <ul>
+                            <li data-tr="Girişimci liderlik stilleri" data-en="Entrepreneurial leadership styles">Girişimci liderlik stilleri</li>
+                            <li data-tr="Vizyoner düşünme" data-en="Visionary thinking">Vizyoner düşünme</li>
+                            <li data-tr="Karar alma mekanizmaları" data-en="Decision-making frameworks">Karar alma mekanizmaları</li>
+                            <li data-tr="Etki ve ikna psikolojisi" data-en="Influence and persuasion psychology">Etki ve ikna psikolojisi</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 2: Takım Kurma" data-en="Module 2: Team Building">Modül 2: Takım Kurma</h4>
+                        <ul>
+                            <li data-tr="A-takım oluşturma" data-en="Building an A-team">A-takım oluşturma</li>
+                            <li data-tr="Kültür ve değerler" data-en="Culture and values">Kültür ve değerler</li>
+                            <li data-tr="Delegasyon ve güçlendirme" data-en="Delegation and empowerment">Delegasyon ve güçlendirme</li>
+                            <li data-tr="Uzak ve hibrit ekip yönetimi" data-en="Remote and hybrid team management">Uzak ve hibrit ekip yönetimi</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 3: Kriz Yönetimi" data-en="Module 3: Crisis Management">Modül 3: Kriz Yönetimi</h4>
+                        <ul>
+                            <li data-tr="Kriz dönemlerinde liderlik" data-en="Leadership during crises">Kriz dönemlerinde liderlik</li>
+                            <li data-tr="Nakit akışı yönetimi" data-en="Cash flow management">Nakit akışı yönetimi</li>
+                            <li data-tr="İtibar yönetimi" data-en="Reputation management">İtibar yönetimi</li>
+                            <li data-tr="Toparlanma ve yeniden yapılanma" data-en="Recovery and restructuring">Toparlanma ve yeniden yapılanma</li>
+                        </ul>
+                    </div>
+                    <div class="module">
+                        <h4 data-tr="Modül 4: Sürdürülebilir Başarı" data-en="Module 4: Sustainable Success">Modül 4: Sürdürülebilir Başarı</h4>
+                        <ul>
+                            <li data-tr="İş-yaşam dengesi" data-en="Work-life balance">İş-yaşam dengesi</li>
+                            <li data-tr="Miras bırakma ve mentorluk" data-en="Legacy building and mentorship">Miras bırakma ve mentorluk</li>
+                            <li data-tr="Sürekli öğrenme kültürü" data-en="Culture of continuous learning">Sürekli öğrenme kültürü</li>
+                            <li data-tr="Sonraki adım: Kendi yolunu çiz" data-en="Next step: Chart your own path">Sonraki adım: Kendi yolunu çiz</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Curriculum Overview / Learning Path -->
+<section class="section learning-path" id="curriculum">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-tr="Eğitim Akışı" data-en="Learning Path">Eğitim Akışı</span>
+            <h2 class="section-title" data-tr="Öğrenme Yolculuğun" data-en="Your Learning Journey">Öğrenme Yolculuğun</h2>
+            <p class="section-desc" data-tr="Adım adım ilerle, her seviyede güçlen" data-en="Progress step by step, grow stronger at every level">Adım adım ilerle, her seviyede güçlen</p>
+        </div>
+
+        <div class="path-timeline">
+            <div class="path-line"></div>
+
+            <div class="path-step" data-step="1">
+                <div class="step-marker">
+                    <span>1</span>
+                </div>
+                <div class="step-content">
+                    <div class="step-badge" data-tr="Başlangıç" data-en="Beginner">Başlangıç</div>
+                    <h3 data-tr="Temelleri Öğren" data-en="Learn the Fundamentals">Temelleri Öğren</h3>
+                    <p data-tr="Girişimci zihin yapısını kazanırsın. İlk fikrinden ilk iş planına giden yolu öğrenirsin. Herkes buradan başlar." data-en="You'll develop an entrepreneurial mindset. Learn the path from your first idea to your first business plan. Everyone starts here.">Girişimci zihin yapısını kazanırsın. İlk fikrinden ilk iş planına giden yolu öğrenirsin. Herkes buradan başlar.</p>
+                    <span class="step-program" data-tr="Program: Girişimciliğe İlk Adım" data-en="Program: First Steps in Entrepreneurship">Program: Girişimciliğe İlk Adım</span>
+                </div>
+            </div>
+
+            <div class="path-step" data-step="2">
+                <div class="step-marker">
+                    <span>2</span>
+                </div>
+                <div class="step-content">
+                    <div class="step-badge" data-tr="Gelişim" data-en="Development">Gelişim</div>
+                    <h3 data-tr="İş Modelini Kur" data-en="Build Your Business Model">İş Modelini Kur</h3>
+                    <p data-tr="İş modelini Canvas ile tasarlarsın. Gelir kaynaklarını belirler, rekabet avantajını oluşturursun. Pivot yapmayı öğrenirsin." data-en="Design your business model with Canvas. Define revenue streams, create competitive advantage. Learn when and how to pivot.">İş modelini Canvas ile tasarlarsın. Gelir kaynaklarını belirler, rekabet avantajını oluşturursun. Pivot yapmayı öğrenirsin.</p>
+                    <span class="step-program" data-tr="Program: İş Modeli & Strateji" data-en="Program: Business Model & Strategy">Program: İş Modeli & Strateji</span>
+                </div>
+            </div>
+
+            <div class="path-step" data-step="3">
+                <div class="step-marker">
+                    <span>3</span>
+                </div>
+                <div class="step-content">
+                    <div class="step-badge" data-tr="İleri Seviye" data-en="Advanced">İleri Seviye</div>
+                    <h3 data-tr="Dünyaya Açıl" data-en="Go Global">Dünyaya Açıl</h3>
+                    <p data-tr="Uluslararası pazarlara giriş stratejilerini öğrenirsin. Avrupa ve Amerika'da şirket kurmayı, vize süreçlerini ve kültürler arası iş yapmayı kavrazsın." data-en="Learn international market entry strategies. Understand setting up companies in Europe and the USA, visa processes, and cross-cultural business.">Uluslararası pazarlara giriş stratejilerini öğrenirsin. Avrupa ve Amerika'da şirket kurmayı, vize süreçlerini ve kültürler arası iş yapmayı kavrazsın.</p>
+                    <span class="step-program" data-tr="Program: Global İş Geliştirme" data-en="Program: Going Global">Program: Global İş Geliştirme</span>
+                </div>
+            </div>
+
+            <div class="path-step" data-step="4">
+                <div class="step-marker">
+                    <span>4</span>
+                </div>
+                <div class="step-content">
+                    <div class="step-badge" data-tr="Uzmanlaşma" data-en="Specialization">Uzmanlaşma</div>
+                    <h3 data-tr="Markalaş & Büyü" data-en="Brand & Scale">Markalaş & Büyü</h3>
+                    <p data-tr="Güçlü bir marka inşa et, dijital pazarlamayı öğren, ölçeklen ve doğru yatırımcı-ortak ilişkilerini kur." data-en="Build a strong brand, master digital marketing, scale up, and establish the right investor-partner relationships.">Güçlü bir marka inşa et, dijital pazarlamayı öğren, ölçeklen ve doğru yatırımcı-ortak ilişkilerini kur.</p>
+                    <span class="step-program" data-tr="Program: Marka & Büyüme" data-en="Program: Brand & Growth">Program: Marka & Büyüme</span>
+                </div>
+            </div>
+
+            <div class="path-step" data-step="5">
+                <div class="step-marker">
+                    <span>5</span>
+                </div>
+                <div class="step-content">
+                    <div class="step-badge" data-tr="Ustalık" data-en="Mastery">Ustalık</div>
+                    <h3 data-tr="Lider Ol" data-en="Become a Leader">Lider Ol</h3>
+                    <p data-tr="Lider girişimci olarak takımlar kur, krizleri yönet ve sürdürülebilir başarıya ulaş. Kendi yolunu çiz." data-en="Build teams as a leader-entrepreneur, manage crises, and achieve sustainable success. Chart your own path.">Lider girişimci olarak takımlar kur, krizleri yönet ve sürdürülebilir başarıya ulaş. Kendi yolunu çiz.</p>
+                    <span class="step-program" data-tr="Program: Liderlik & Vizyon" data-en="Program: Leadership & Vision">Program: Liderlik & Vizyon</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Journey / World Map Section -->
+<section class="section world-section" id="journey">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-tr="Yolculuk" data-en="Journey">Yolculuk</span>
+            <h2 class="section-title" data-tr="5 Ülke. 8 Şehir. Sonsuz Deneyim." data-en="5 Countries. 8 Cities. Infinite Experience.">5 Ülke. 8 Şehir. Sonsuz Deneyim.</h2>
+        </div>
+        <div class="world-cities">
+            <div class="world-city">
+                <div class="city-flag">&#127481;&#127479;</div>
+                <h3>Ankara</h3>
+                <p data-tr="Başlangıç noktası" data-en="Starting point">Başlangıç noktası</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127481;&#127479;</div>
+                <h3>Eskişehir</h3>
+                <p data-tr="İlk girişimler" data-en="First ventures">İlk girişimler</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127481;&#127479;</div>
+                <h3>İstanbul</h3>
+                <p data-tr="Büyüme merkezi" data-en="Growth hub">Büyüme merkezi</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127465;&#127466;</div>
+                <h3>Düsseldorf</h3>
+                <p data-tr="Avrupa açılımı" data-en="European expansion">Avrupa açılımı</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127468;&#127463;</div>
+                <h3>London</h3>
+                <p data-tr="Global network" data-en="Global network">Global network</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127482;&#127480;</div>
+                <h3>New York</h3>
+                <p data-tr="Amerika'ya giriş" data-en="Entering America">Amerika'ya giriş</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127482;&#127480;</div>
+                <h3>Los Angeles</h3>
+                <p data-tr="Batı yakası" data-en="West coast">Batı yakası</p>
+            </div>
+            <div class="world-city">
+                <div class="city-flag">&#127482;&#127480;</div>
+                <h3>Miami</h3>
+                <p data-tr="Yeni merkez" data-en="New headquarters">Yeni merkez</p>
+            </div>
+        </div>
+        <div class="world-quote">
+            <p data-tr="&ldquo;Aynı yerde saymak korkakların, yeniden başlamak cesurların işidir.&rdquo;" data-en="&ldquo;Staying still is for cowards. Restarting is for the brave.&rdquo;">&ldquo;Aynı yerde saymak korkakların, yeniden başlamak cesurların işidir.&rdquo;</p>
+        </div>
+    </div>
+</section>
+
+<!-- Next You Agency CTA -->
+<section class="section cta-section">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-content">
+                <span class="section-tag" data-tr="Next You Agency" data-en="Next You Agency">Next You Agency</span>
+                <h2 data-tr="Hayalindeki ülkede yaşamak ister misin?" data-en="Want to live in your dream country?">Hayalindeki ülkede yaşamak ister misin?</h2>
+                <p data-tr="Next You Agency ile tanış. Eğitim, danışmanlık ve rehberlik hizmetleri ile hayallerine bir adım daha yaklaş." data-en="Meet Next You Agency. Get one step closer to your dreams with training, consulting, and guidance services.">Next You Agency ile tanış. Eğitim, danışmanlık ve rehberlik hizmetleri ile hayallerine bir adım daha yaklaş.</p>
+                <a href="https://www.cemakin.com/" target="_blank" class="btn btn-primary" data-tr="Next You Agency'yi Keşfet" data-en="Discover Next You Agency">Next You Agency'yi Keşfet</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="section contact" id="contact">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag" data-tr="İletişim" data-en="Contact">İletişim</span>
+            <h2 class="section-title" data-tr="Yolculuğa Başla" data-en="Start Your Journey">Yolculuğa Başla</h2>
+            <p class="section-desc" data-tr="Sorularını sor, bilgi al veya eğitim programlarına başvur" data-en="Ask your questions, get information, or apply for training programs">Sorularını sor, bilgi al veya eğitim programlarına başvur</p>
+        </div>
+        <div class="contact-grid">
+            <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+                <div class="form-group">
+                    <label data-tr="Ad Soyad" data-en="Full Name">Ad Soyad</label>
+                    <input type="text" required placeholder="">
+                </div>
+                <div class="form-group">
+                    <label data-tr="E-posta" data-en="Email">E-posta</label>
+                    <input type="email" required placeholder="">
+                </div>
+                <div class="form-group">
+                    <label data-tr="İlgilendiğin Program" data-en="Program of Interest">İlgilendiğin Program</label>
+                    <select>
+                        <option value="" data-tr="Bir program seç..." data-en="Select a program...">Bir program seç...</option>
+                        <option value="1" data-tr="Girişimciliğe İlk Adım" data-en="First Steps in Entrepreneurship">Girişimciliğe İlk Adım</option>
+                        <option value="2" data-tr="İş Modeli & Strateji" data-en="Business Model & Strategy">İş Modeli & Strateji</option>
+                        <option value="3" data-tr="Global İş Geliştirme" data-en="Going Global">Global İş Geliştirme</option>
+                        <option value="4" data-tr="Marka & Büyüme" data-en="Brand & Growth">Marka & Büyüme</option>
+                        <option value="5" data-tr="Liderlik & Vizyon" data-en="Leadership & Vision">Liderlik & Vizyon</option>
+                        <option value="all" data-tr="Tüm Programlar" data-en="All Programs">Tüm Programlar</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label data-tr="Mesajın" data-en="Your Message">Mesajın</label>
+                    <textarea rows="4" placeholder=""></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary btn-full" data-tr="Gönder" data-en="Send">Gönder</button>
+                <div class="form-success" id="formSuccess" data-tr="Mesajın başarıyla gönderildi!" data-en="Your message has been sent successfully!">Mesajın başarıyla gönderildi!</div>
+            </form>
+            <div class="contact-info">
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+                    </div>
+                    <h4>Email</h4>
+                    <a href="mailto:hello@nextyouagency.com">hello@nextyouagency.com</a>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+                    </div>
+                    <h4>Instagram</h4>
+                    <a href="https://www.instagram.com/_cemakin/" target="_blank">@_cemakin</a>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                    </div>
+                    <h4 data-tr="Konum" data-en="Location">Konum</h4>
+                    <p>Miami, FL & İstanbul, TR</p>
+                </div>
+                <div class="info-card">
+                    <div class="info-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2z"/><path d="M12 6v6l4 2"/></svg>
+                    </div>
+                    <h4 data-tr="Çalışma Saatleri" data-en="Working Hours">Çalışma Saatleri</h4>
+                    <p data-tr="Pazartesi - Cuma: 09:00 - 18:00" data-en="Monday - Friday: 09:00 - 18:00">Pazartesi - Cuma: 09:00 - 18:00</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-text">CA</span>
+                <span class="logo-name">Academy</span>
+                <p class="footer-mission" data-tr="1 milyon kişiyi kendi hayalleri için yola çıkarmak." data-en="Launch 1 million people toward their own dreams.">1 milyon kişiyi kendi hayalleri için yola çıkarmak.</p>
+            </div>
+            <div class="footer-links">
+                <a href="https://www.cemakin.com/" target="_blank">cemakin.com</a>
+                <a href="https://www.instagram.com/_cemakin/" target="_blank">Instagram</a>
+                <a href="mailto:hello@nextyouagency.com">Email</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Cem Akın Academy. <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
+        </div>
+    </div>
+</footer>
+
+<!-- Auth Modals -->
+<div class="modal-overlay" id="modalOverlay" onclick="closeModal()"></div>
+
+<!-- Login Modal -->
+<div class="modal" id="loginModal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <h2 class="modal-title" data-tr="Giriş Yap" data-en="Login">Giriş Yap</h2>
+    <p class="modal-desc" data-tr="Hesabınıza giriş yaparak eğitimlere erişin." data-en="Access your courses by logging into your account.">Hesabınıza giriş yaparak eğitimlere erişin.</p>
+    <form onsubmit="handleAuth(event, 'login')">
+        <div class="form-group">
+            <label data-tr="E-posta" data-en="Email">E-posta</label>
+            <input type="email" required>
+        </div>
+        <div class="form-group">
+            <label data-tr="Şifre" data-en="Password">Şifre</label>
+            <input type="password" required>
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" data-tr="Giriş Yap" data-en="Login">Giriş Yap</button>
+    </form>
+    <div class="modal-footer">
+        <p data-tr="Hesabınız yok mu?" data-en="Don't have an account?">Hesabınız yok mu?</p>
+        <button class="modal-switch" onclick="switchModal('register')" data-tr="Kayıt Ol" data-en="Register">Kayıt Ol</button>
+    </div>
+    <div class="auth-message" id="loginMsg"></div>
+</div>
+
+<!-- Register Modal -->
+<div class="modal" id="registerModal">
+    <button class="modal-close" onclick="closeModal()">&times;</button>
+    <h2 class="modal-title" data-tr="Kayıt Ol" data-en="Register">Kayıt Ol</h2>
+    <p class="modal-desc" data-tr="Eğitim platformuna katılmak için kayıt olun." data-en="Register to join the training platform.">Eğitim platformuna katılmak için kayıt olun.</p>
+    <form onsubmit="handleAuth(event, 'register')">
+        <div class="form-group">
+            <label data-tr="Ad Soyad" data-en="Full Name">Ad Soyad</label>
+            <input type="text" required>
+        </div>
+        <div class="form-group">
+            <label data-tr="E-posta" data-en="Email">E-posta</label>
+            <input type="email" required>
+        </div>
+        <div class="form-group">
+            <label data-tr="Şifre" data-en="Password">Şifre</label>
+            <input type="password" required minlength="6">
+        </div>
+        <div class="form-group">
+            <label data-tr="Şifre Tekrar" data-en="Confirm Password">Şifre Tekrar</label>
+            <input type="password" required minlength="6">
+        </div>
+        <button type="submit" class="btn btn-primary btn-full" data-tr="Kayıt Ol" data-en="Register">Kayıt Ol</button>
+    </form>
+    <div class="modal-footer">
+        <p data-tr="Zaten hesabınız var mı?" data-en="Already have an account?">Zaten hesabınız var mı?</p>
+        <button class="modal-switch" onclick="switchModal('login')" data-tr="Giriş Yap" data-en="Login">Giriş Yap</button>
+    </div>
+    <div class="auth-message" id="registerMsg"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
