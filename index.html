@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=20260314a">
 </head>
 <body>
 
@@ -696,6 +696,44 @@
     <div class="auth-message" id="registerMsg"></div>
 </div>
 
-<script src="script.js"></script>
+<script src="script.js?v=20260314a"></script>
+
+<!-- CEM AI CHATBOT -->
+<div class="cem-chat-fab" id="cemChatFab" onclick="toggleCemChat()">
+    <div class="fab-pulse"></div>
+    <div class="fab-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+    </div>
+    <div class="fab-close">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </div>
+    <span class="fab-badge" id="cemFabBadge">1</span>
+</div>
+
+<div class="cem-chat-window" id="cemChatWindow">
+    <div class="cem-chat-header">
+        <div class="cem-chat-header-info">
+            <div class="cem-chat-avatar">
+                <img src="cem-akin.jpg" alt="Cem AI">
+                <span class="cem-chat-online"></span>
+            </div>
+            <div>
+                <div class="cem-chat-name">Cem AI</div>
+                <div class="cem-chat-status" id="cemChatStatus" data-tr="Çevrimiçi" data-en="Online">Çevrimiçi</div>
+            </div>
+        </div>
+        <button class="cem-chat-header-close" onclick="toggleCemChat()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+        </button>
+    </div>
+    <div class="cem-chat-body" id="cemChatBody"></div>
+    <div class="cem-chat-suggestions" id="cemChatSuggestions"></div>
+    <div class="cem-chat-footer">
+        <input type="text" id="cemChatInput" autocomplete="off" placeholder="Bir soru sorun..." data-tr="Bir soru sorun..." data-en="Ask a question..." onkeydown="if(event.key==='Enter')sendCemChat()">
+        <button class="cem-chat-send" onclick="sendCemChat()">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+        </button>
+    </div>
+</div>
 </body>
 </html>
